@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePageClient() {
+ const name = process.env.NEXT_PUBLIC_SITE_NAME || "PG Home";
+  
   const assets = useMemo(
     () => ({
       carousel1: "/img/carousel-1.jpg",
@@ -245,7 +247,7 @@ export default function HomePageClient() {
 
             <div className="col-lg-7 col-md-6">
               <div className="section-header text-left">
-                <p>PG Home Co., Ltd.</p>
+                <p>{name}</p>
                 <h2>ประสบการณ์มากกว่า 13 ปี</h2>
               </div>
 
